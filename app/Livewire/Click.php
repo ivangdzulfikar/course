@@ -8,9 +8,12 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Attributes\Rule;
 use Livewire\Attributes\Validate;
+use Livewire\WithPagination;
 
 class Click extends Component
 {
+    use WithPagination;
+
     #[Rule('required|min:6|max:255')]
     public $name = "";
 
@@ -20,23 +23,26 @@ class Click extends Component
     #[Rule('required|min:3')]
     public $password = "";
 
+    public $search = "";
+
+    public function updatingSearch()
+    {
+        $this->resetPage();
+    }
+
     public function createUser()
     {
-        $this->validate();
+        $validate = $this->validate();
 
-        User::create([
-            'name' => $this->name,
-            'email' => $this->email,
-            'email_verified_at' => now(),
-            'password' => Hash::make($this->password),
-            'remember_token' => Str::random(10),
-        ]);
+        User::create($validate);
 
         $this->reset('name', 'email', 'password');
+
+        session()->flash('success', 'Post successfully updated.');
     }
     public function render()
     {
-        $user = User::all();
+        $user = User::where('name', 'like', "%$this->search%")->paginate(5);
         $title = "Home";
         return view('livewire.click', [
             'title' => $title,
