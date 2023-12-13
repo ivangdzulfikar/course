@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Laravel</title>
+    @vite('resources/css/app.css')
 
 </head>
 
-<body class="antialiased">
+<body class="p-10">
 
+    <p class="text-3xl  text-center font-bold underline">
+        Hello world!
+    </p>
     <livewire:click />
 </body>
 
