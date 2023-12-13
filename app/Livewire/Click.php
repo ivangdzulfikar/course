@@ -2,29 +2,23 @@
 
 namespace App\Livewire;
 
+use App\Models\User;
 use Livewire\Component;
 
 class Click extends Component
 {
-    public $count;
 
-    public function handlerClick()
+    public function handlClick()
     {
         dump("click");
     }
-
-    public function increment()
-    {
-        $this->count++;
-    }
-
-    public function decrement()
-    {
-        $this->count--;
-    }
-    
     public function render()
     {
-        return view('livewire.click');
+     $user = User::all();   
+     $title = "Home";
+        return view('livewire.click', [
+            'title' => $title,
+            'users' => $user
+        ]);
     }
 }

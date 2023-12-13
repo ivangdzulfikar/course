@@ -1,7 +1,10 @@
 <div>
-    <button wire:click="handlerClick">Click</button>
+    <h1>{{ $title }}</h1>
+    <button wire:click="handleClick">Click</button>
 
-    <p>{{ $count }}</p>
-    <button wire:click="increment">+</button>
-    <button wire:click="decrement">-</button>
+    <ul>
+        @foreach ($users as $user)
+            <li>{{ $user->name }}</li>
+        @endforeach
+    </ul>
 </div>
