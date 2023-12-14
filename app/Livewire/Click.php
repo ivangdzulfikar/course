@@ -4,10 +4,7 @@ namespace App\Livewire;
 
 use App\Models\User;
 use Livewire\Component;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Hash;
 use Livewire\Attributes\Rule;
-use Livewire\Attributes\Validate;
 use Livewire\WithPagination;
 
 class Click extends Component

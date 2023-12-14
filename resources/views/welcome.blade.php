@@ -12,10 +12,16 @@
 
 <body class="p-10">
 
-    <p class="text-3xl  text-center font-bold underline">
-        Hello world!
-    </p>
-    <livewire:click />
+    <div class="container flex justify-center items-center">
+
+        <livewire:form-register />
+        
+        
+    </div>
+    <div>
+        <livewire:todo-list />
+    </div>
+
 </body>
 
 </html>
