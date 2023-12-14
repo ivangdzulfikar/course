@@ -18,9 +18,9 @@
         
         
     </div>
-    <div>
+    {{-- <div>
         <livewire:todo-list />
-    </div>
+    </div> --}}
 
 </body>
 
