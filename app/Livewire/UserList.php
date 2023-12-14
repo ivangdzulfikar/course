@@ -19,8 +19,14 @@ class UserList extends Component
 
     }
 
+    public function placeholder()
+    {
+        return view('placeholder');
+    }
+
     public function render()
     {   
+        sleep(3);
         $user = User::latest()->where('name', 'like', "%$this->search%")->paginate(5);
         return view('livewire.user-list', [
             'users' => $user

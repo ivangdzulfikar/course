@@ -13,7 +13,7 @@
 <body class="p-10 flex justify-between gap-5">
 
     <div class="grow">
-        <livewire:user-list />
+        <livewire:user-list lazy/>
     </div>
 {{-- 
     <div class="flex justify-center items-center">
