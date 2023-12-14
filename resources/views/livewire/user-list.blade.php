@@ -1,5 +1,5 @@
 {{-- User List --}}
-<div class="bg-gray-50 rounded-xl shadow">
+<div wire:poll class="bg-gray-50 rounded-xl shadow">
 
     {{-- Search --}}
     <div class="flex justify-between items-center rounded-t-xl p-3 bg-gray-300">

@@ -15,12 +15,12 @@
     <div class="grow">
         <livewire:user-list />
     </div>
-
+{{-- 
     <div class="flex justify-center items-center">
 
         <livewire:form-register />
         
-    </div>
+    </div> --}}
     {{-- <div>
         <livewire:todo-list />
     </div> --}}
