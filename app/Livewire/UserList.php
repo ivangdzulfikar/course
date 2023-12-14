@@ -19,6 +19,11 @@ class UserList extends Component
 
     }
 
+    public function mount($search)
+    {
+        $this->search = $search;
+    }
+
     public function placeholder()
     {
         return view('placeholder');
@@ -26,7 +31,6 @@ class UserList extends Component
 
     public function render()
     {   
-        sleep(3);
         $user = User::latest()->where('name', 'like', "%$this->search%")->paginate(5);
         return view('livewire.user-list', [
             'users' => $user
