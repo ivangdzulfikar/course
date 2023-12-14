@@ -5,7 +5,7 @@
     <div class="flex justify-between items-center rounded-t-xl p-3 bg-gray-300">
         <h2 class="text-2xl text-center font-medium">User List</h2>
         <input class="bg-gray-100 hover:bg-gray-200 rounded py-2 px-3 text-sm focus:outline-sky-500 text-gray-900"
-            wire:model.live="search" type="text" placeholder="Search...">
+            wire:model.live="search" type="text" placeholder="Search here...">
     </div>
 
     <ul class="px-6 py-3">
