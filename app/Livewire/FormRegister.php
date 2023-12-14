@@ -31,12 +31,20 @@ class FormRegister extends Component
             $validated['image'] = $this->image->store('uploads', 'public');
         }
 
-        User::create($validated);
+        $user = User::create($validated);
 
         $this->reset('name', 'email', 'password');
 
         session()->flash('success', 'Post successfully updated.');
+
+        $this->dispatch('create-user', $user);
     }
+
+    public function reloadList()
+    {
+        $this->dispatch('create-user');
+    }
+
     public function render()
     {
         $users = User::all();

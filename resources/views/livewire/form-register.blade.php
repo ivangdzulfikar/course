@@ -1,4 +1,4 @@
-<div class="border-t-8 border-sky-400 shadow-md px-8 w-1/3 rounded-b-xl">
+<div class="border-t-8 border-sky-400 shadow-md px-8 w-96 rounded-b-xl">
     @if (session('success'))
 
     <span class="bg-green-600 text-white px-3 py-1 pb-2 rounded text-center font-medium inline-block">
@@ -57,6 +57,7 @@
         </div>
 
         <div class="flex items-center self-end gap-3 mt-6">
+            <button wire:click.prevent="reloadList" class="hover:bg-sky-700 ease-in duration-100 w-36 py-2 px-6 bg-sky-400 text-white rounded-md">Reload List</button>
 
             <div wire:loading.delay>
                 <span class="text-green-500">Processing...</span>

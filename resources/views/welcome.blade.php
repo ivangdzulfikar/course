@@ -10,12 +10,15 @@
 
 </head>
 
-<body class="p-10">
+<body class="p-10 flex justify-between gap-5">
 
-    <div class="container flex justify-center items-center">
+    <div class="grow">
+        <livewire:user-list />
+    </div>
+
+    <div class="flex justify-center items-center">
 
         <livewire:form-register />
-        
         
     </div>
     {{-- <div>
