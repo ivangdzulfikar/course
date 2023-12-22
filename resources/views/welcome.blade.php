@@ -13,7 +13,7 @@
 <body class="p-10 flex justify-between gap-5">
 
     <div class="grow">
-        <livewire:user-list lazy search="test" />
+        <livewire:user-list lazy search="prof" />
     </div>
 {{-- 
     <div class="flex justify-center items-center">
