@@ -10,20 +10,30 @@
 
 </head>
 
-<body class="p-10 flex justify-between gap-5">
+<body class="p-10 flex justify-between  items-center gap-5">
 
+    <div class="w-2/4 mx-auto p-10">
+
+        
+
+        <livewire:contact-us />
+    </div>
+
+
+    {{--
     <div class="grow">
         <livewire:user-list lazy search="prof" />
     </div>
-{{-- 
+
     <div class="flex justify-center items-center">
 
         <livewire:form-register />
-        
-    </div> --}}
-    {{-- <div>
+
+    </div>
+    <div>
         <livewire:todo-list />
     </div> --}}
+
 
 </body>
 
