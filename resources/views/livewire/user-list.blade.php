@@ -9,10 +9,10 @@
     </div>
 
     <ul class="px-6 py-3">
-        <li>{{ $users->total() }}</li>
-        @if ($users->count(0))
+        <li>{{ $this->users->total() }}</li>
+        @if ($this->users->count(0))
 
-        @foreach ($users as $user)
+        @foreach ($this->users as $user)
         <li
             class="bg-white my-3 p-3 rounded shadow hover:shadow-lg hover:bg-gray-100 origin-center ease-in duration-75">
             {{ $user->name }}
@@ -24,7 +24,7 @@
     </ul>
 
     <div class="p-3">
-        {{ $users->links() }}
+        {{ $this->users->links() }}
     </div>
 
 </div>
