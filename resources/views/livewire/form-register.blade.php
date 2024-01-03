@@ -1,4 +1,4 @@
-<div class="border-t-8 border-sky-400 shadow-md px-8 w-96 rounded-b-xl">
+<div class="border-t-8 border-sky-400 shadow-md px-8 pb-3 rounded-b-xl">
     @if (session('success'))
 
     <span class="bg-green-600 text-white px-3 py-1 pb-2 rounded text-center font-medium inline-block">

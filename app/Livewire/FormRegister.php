@@ -33,7 +33,7 @@ class FormRegister extends Component
 
         $user = User::create($validated);
 
-        $this->reset('name', 'email', 'password');
+        $this->reset('name', 'email', 'password', 'image');
 
         session()->flash('success', 'Post successfully updated.');
 

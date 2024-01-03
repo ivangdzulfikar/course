@@ -10,31 +10,30 @@
 
 </head>
 
-<body class="p-10 flex justify-between  items-center gap-5">
+<body class="p-10 items-center">
 
-    <div class="w-2/4 mx-auto p-10">
+    <x-modal title="Modal 1" name="modal1">
+        <x-slot:body>
+            <p>
+                Modal 1 Body
+            </p>
+        </x-slot:body>
+    </x-modal>
 
-        
+    <x-modal title="Modal 2" name="modal2">
+        <x-slot:body>
+            <livewire:form-register :lazy='true'/>
+        </x-slot:body>
+    </x-modal>
 
-        <livewire:contact-us />
+    <button x-data @click="$dispatch('open-modal',{name : 'modal1'})" class="bg-sky-500 px-3 py-1 rounded hover:bg-sky-700 text-white">Modal 1</button>
+    <button x-data @click="$dispatch('open-modal',{name : 'modal2'})" class="bg-teal-500 px-3 py-1 rounded hover:bg-teal-700 text-white">Modal 2</button>
+
+    <div class="mt-5">
+        <livewire:user-list search=""/>
     </div>
 
-
-    {{--
-    <div class="grow">
-        <livewire:user-list lazy search="prof" />
-    </div>
-
-    <div class="flex justify-center items-center">
-
-        <livewire:form-register />
-
-    </div>
-    <div>
-        <livewire:todo-list />
-    </div> --}}
-
-
+{{-- @livewireScripts --}}
 </body>
 
 </html>
